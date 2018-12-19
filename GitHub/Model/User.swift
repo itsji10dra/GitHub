@@ -21,13 +21,13 @@ struct User: Decodable {
     let eventsURL: String
     let receivedEventsURL: String
     let type: String
-    private(set) var siteAdmin: Bool = false
+    let siteAdmin: Bool
     let name: String?
     let company: String?
     let blog: String?
     let location: String?
     let email: String?
-    private(set) var hireable: Bool? = false
+    let hireable: Bool?
     let bio: String?
     let publicRepos, publicGists, followers, following: Int?
     let createdAt, updatedAt: Date?
