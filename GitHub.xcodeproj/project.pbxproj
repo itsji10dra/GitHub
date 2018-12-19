@@ -39,6 +39,7 @@
 		0781E12A21CAAC5A0040FB1E /* DetailInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0781E12921CAAC5A0040FB1E /* DetailInfoView.xib */; };
 		0781E13221CAD1970040FB1E /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E13121CAD1970040FB1E /* FollowersListVC.swift */; };
 		0781E13421CAD6330040FB1E /* FollowersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E13321CAD6330040FB1E /* FollowersViewModel.swift */; };
+		0781E13621CADC390040FB1E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E13521CADC390040FB1E /* Date+Extension.swift */; };
 		B206B8C428FF41C935A2045C /* Pods_GitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C6B7B84A7E5F383559ED11 /* Pods_GitHub.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		0781E12921CAAC5A0040FB1E /* DetailInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailInfoView.xib; sourceTree = "<group>"; };
 		0781E13121CAD1970040FB1E /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
 		0781E13321CAD6330040FB1E /* FollowersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewModel.swift; sourceTree = "<group>"; };
+		0781E13521CADC390040FB1E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		14B2E0D4B1BA45F4A9BAE6BC /* Pods-GitHubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubTests/Pods-GitHubTests.release.xcconfig"; sourceTree = "<group>"; };
 		36E4D194A9A7BD0163C0C0D9 /* Pods-GitHubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubTests/Pods-GitHubTests.debug.xcconfig"; sourceTree = "<group>"; };
 		36FA0061663C0C5E17AEB618 /* Pods-GitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub/Pods-GitHub.debug.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				0781E11D21CA7D070040FB1E /* UIView+Constraint+Extension.swift */,
 				0781E0EA21CA51C30040FB1E /* UIView+Extension.swift */,
 				0781E12521CAAA920040FB1E /* DateFormatter+Extension.swift */,
+				0781E13521CADC390040FB1E /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				0781E10721CA53060040FB1E /* EndPoints.swift in Sources */,
 				0781E12421CA9DD80040FB1E /* DetailsViewModel.swift in Sources */,
 				0781E11321CA5C790040FB1E /* SearchVC+Delegates.swift in Sources */,
+				0781E13621CADC390040FB1E /* Date+Extension.swift in Sources */,
 				0781E10A21CA573D0040FB1E /* User.swift in Sources */,
 				0781E11921CA7C7B0040FB1E /* UserDetailsVC.swift in Sources */,
 				0781E0BC21CA50160040FB1E /* AppDelegate.swift in Sources */,

@@ -49,8 +49,12 @@ class FollowersListVC: UIViewController {
             
             DispatchQueue.main.async {
                 if let data = data {
-                    self?.followersArray = data
-                    self?.followersTableView.reloadData()
+                    if data.isEmpty {
+                        self?.showErrorAlert(with: "No followers found.")
+                    } else {
+                        self?.followersArray = data
+                        self?.followersTableView.reloadData()
+                    }
                 } else if let error = error {
                     self?.showErrorAlert(with: error.localizedDescription)
                 }
@@ -72,7 +76,7 @@ class FollowersListVC: UIViewController {
         alertController.addAction(retryAction)
         
         let cancelAction = UIAlertAction(title: "Dismiss", style: .cancel){ [unowned self] _ in
-            self.navigationController?.popViewController(animated: false)
+            self.navigationController?.popViewController(animated: true)
         }
         alertController.addAction(cancelAction)
         

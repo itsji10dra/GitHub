@@ -50,6 +50,9 @@ class DetailsViewModel {
             switch result {
             case .success(let user):
                 
+                let lastUpdated = Date.string(from: user.updatedAt,
+                                              format: .dd_dash_MM_dash_yyyy_comma_space_HH_colon_mm_I_space_EEEE)
+                
                 let details = UserDetailsVC.DetailsDisplayModel(username: user.login,
                                                                 name: user.name,
                                                                 profileImageURL: user.avatarURL,
@@ -63,7 +66,7 @@ class DetailsViewModel {
                                                                 publicGistCount: user.publicGists ?? 0,
                                                                 followersCount: user.followers ?? 0,
                                                                 followingCount: user.following ?? 0,
-                                                                updatedDate: user.updatedAt?.description)
+                                                                updatedDate: lastUpdated)
                 
                 completion(details, nil)
                 

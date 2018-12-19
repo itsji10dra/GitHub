@@ -120,7 +120,7 @@ class UserDetailsVC: UIViewController {
         alertController.addAction(retryAction)
         
         let cancelAction = UIAlertAction(title: "Dismiss", style: .cancel){ [unowned self] _ in
-            self.navigationController?.popViewController(animated: false)
+            self.navigationController?.popViewController(animated: true)
         }
         alertController.addAction(cancelAction)
         
