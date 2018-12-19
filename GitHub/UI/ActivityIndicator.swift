@@ -3,7 +3,7 @@
 //  GitHub
 //
 //  Created by Jitendra Gandhi on 19/12/18.
-//  Copyright © 2018 itsji10dra.com. All rights reserved.
+//  Copyright © 2018 Jitendra Gandhi. All rights reserved.
 //
 
 import UIKit

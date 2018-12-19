@@ -12,13 +12,11 @@ import FireCache
 extension SearchVC: UISearchBarDelegate {
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
         pagingModel.clearDataSource()
-        if searchText.isEmpty {
-            usersArray.removeAll()
-            usersTableView.reloadData()
-        } else {
-            loadUsers(query: searchText)
-        }
+        usersArray.removeAll()
+        
+        searchText.isEmpty ? usersTableView.reloadData() : loadUsers(query: searchText)
     }
 }
 

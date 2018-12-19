@@ -62,7 +62,7 @@ class SearchVC: UIViewController {
                 ActivityIndicator.stopAnimating()
                 
                 if let data = data {
-                    self?.usersArray = data
+                    self?.usersArray.append(contentsOf: data)
                     self?.usersTableView.reloadData()
                     self?.loaderView.hide()
                 } else if let error = error {

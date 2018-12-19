@@ -21,8 +21,6 @@ class PagingViewModel<T, E> where T:Decodable {
     
     private lazy var receivedDataSource: [T] = []
 
-    private lazy var dataSource: [E] = []
-    
     private var dataTask: URLSessionDataTask?
     
     private lazy var networkManager = NetworkManager()
@@ -74,7 +72,7 @@ class PagingViewModel<T, E> where T:Decodable {
     
     public func clearDataSource() {
         lastPageLoaded = -1
-        dataSource.removeAll()
+        receivedDataSource.removeAll()
     }
     
     // MARK: - Private Methods
@@ -101,12 +99,10 @@ class PagingViewModel<T, E> where T:Decodable {
                 guard let data = self?.transform(users) else { return completionHandler([], nil, page) }
                 
                 self?.lastPageLoaded = Int(page)
-                
-                self?.dataSource.append(contentsOf: data)
-                
+                                
                 self?.receivedDataSource.append(contentsOf: users)
 
-                completionHandler(self?.dataSource, nil, UInt(page))
+                completionHandler(data, nil, UInt(page))
                 
             case .failure(let error):
                 print(" • Page:", page, " failed. Reason: ", error.localizedDescription)
