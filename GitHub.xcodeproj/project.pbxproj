@@ -23,6 +23,8 @@
 		0781E10621CA53060040FB1E /* QueryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E10221CA53060040FB1E /* QueryItem.swift */; };
 		0781E10721CA53060040FB1E /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E10321CA53060040FB1E /* EndPoints.swift */; };
 		0781E10821CA53060040FB1E /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E10421CA53060040FB1E /* URLManager.swift */; };
+		0781E10A21CA573D0040FB1E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E10921CA573D0040FB1E /* User.swift */; };
+		0781E10D21CA59820040FB1E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E10C21CA59820040FB1E /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		0781E10221CA53060040FB1E /* QueryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryItem.swift; sourceTree = "<group>"; };
 		0781E10321CA53060040FB1E /* EndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		0781E10421CA53060040FB1E /* URLManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
+		0781E10921CA573D0040FB1E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0781E10C21CA59820040FB1E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 				0781E0BB21CA50160040FB1E /* AppDelegate.swift */,
 				0781E0DD21CA511D0040FB1E /* Configuration.swift */,
 				0781E0BF21CA50160040FB1E /* Main.storyboard */,
+				0781E10B21CA57410040FB1E /* Model */,
 				0781E0FA21CA529D0040FB1E /* Network */,
 				0781E0EF21CA51CD0040FB1E /* Views */,
 				0781E0E821CA51C30040FB1E /* Extension */,
@@ -184,6 +189,15 @@
 				0781E10421CA53060040FB1E /* URLManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		0781E10B21CA57410040FB1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0781E10921CA573D0040FB1E /* User.swift */,
+				0781E10C21CA59820040FB1E /* Response.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,8 +308,10 @@
 				0781E0F921CA52730040FB1E /* PagingViewModel.swift in Sources */,
 				0781E10821CA53060040FB1E /* URLManager.swift in Sources */,
 				0781E10521CA53060040FB1E /* EndPointPath.swift in Sources */,
+				0781E10D21CA59820040FB1E /* Response.swift in Sources */,
 				0781E0FE21CA529E0040FB1E /* NetworkManager.swift in Sources */,
 				0781E10721CA53060040FB1E /* EndPoints.swift in Sources */,
+				0781E10A21CA573D0040FB1E /* User.swift in Sources */,
 				0781E0BC21CA50160040FB1E /* AppDelegate.swift in Sources */,
 				0781E0ED21CA51C30040FB1E /* UIView+Extension.swift in Sources */,
 				0781E0F521CA51CD0040FB1E /* LoadingView.swift in Sources */,
