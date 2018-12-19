@@ -52,6 +52,9 @@ class SearchVC: UIViewController {
         let loadingInfo = pagingModel.loadMoreData(query: query) { [weak self] (data, error, page) in
             
             DispatchQueue.main.async {
+                
+                ActivityIndicator.stopAnimating()
+                
                 if let data = data {
                     self?.usersArray = data
                     self?.usersTableView.reloadData()
@@ -70,7 +73,7 @@ class SearchVC: UIViewController {
         
         if loadingInfo.isLoading {
             if loadingInfo.page == 0 {
-//                refreshControl.endRefreshing()
+                ActivityIndicator.startAnimating()
             } else {
                 loaderView.showMessage("Loading...", animateLoader: true)
             }

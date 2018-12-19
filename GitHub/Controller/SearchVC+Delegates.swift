@@ -11,8 +11,8 @@ import UIKit
 extension SearchVC: UISearchBarDelegate {
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        pagingModel.clearDataSource()
         if searchText.isEmpty {
-            pagingModel.clearDataSource()
             usersArray.removeAll()
             usersTableView.reloadData()
         } else {

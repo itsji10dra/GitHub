@@ -27,6 +27,9 @@
 		0781E10D21CA59820040FB1E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E10C21CA59820040FB1E /* Response.swift */; };
 		0781E11321CA5C790040FB1E /* SearchVC+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E11221CA5C790040FB1E /* SearchVC+Delegates.swift */; };
 		0781E11721CA5EBD0040FB1E /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E11621CA5EBD0040FB1E /* UserCell.swift */; };
+		0781E11921CA7C7B0040FB1E /* UserDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E11821CA7C7B0040FB1E /* UserDetailsVC.swift */; };
+		0781E11C21CA7CDD0040FB1E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E11B21CA7CDD0040FB1E /* ActivityIndicator.swift */; };
+		0781E11E21CA7D070040FB1E /* UIView+Constraint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E11D21CA7D070040FB1E /* UIView+Constraint+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		0781E10C21CA59820040FB1E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		0781E11221CA5C790040FB1E /* SearchVC+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchVC+Delegates.swift"; sourceTree = "<group>"; };
 		0781E11621CA5EBD0040FB1E /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		0781E11821CA7C7B0040FB1E /* UserDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsVC.swift; sourceTree = "<group>"; };
+		0781E11B21CA7CDD0040FB1E /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		0781E11D21CA7D070040FB1E /* UIView+Constraint+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 				0781E0BB21CA50160040FB1E /* AppDelegate.swift */,
 				0781E0DD21CA511D0040FB1E /* Configuration.swift */,
 				0781E0BF21CA50160040FB1E /* Main.storyboard */,
+				0781E11A21CA7CDD0040FB1E /* UI */,
 				0781E10B21CA57410040FB1E /* Model */,
 				0781E0FA21CA529D0040FB1E /* Network */,
 				0781E0EF21CA51CD0040FB1E /* Views */,
@@ -145,6 +152,7 @@
 			children = (
 				0781E0BD21CA50160040FB1E /* SearchVC.swift */,
 				0781E11221CA5C790040FB1E /* SearchVC+Delegates.swift */,
+				0781E11821CA7C7B0040FB1E /* UserDetailsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 		0781E0E821CA51C30040FB1E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				0781E11D21CA7D070040FB1E /* UIView+Constraint+Extension.swift */,
 				0781E0EA21CA51C30040FB1E /* UIView+Extension.swift */,
 			);
 			name = Extension;
@@ -203,6 +212,14 @@
 				0781E10C21CA59820040FB1E /* Response.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0781E11A21CA7CDD0040FB1E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0781E11B21CA7CDD0040FB1E /* ActivityIndicator.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,9 +336,12 @@
 				0781E10721CA53060040FB1E /* EndPoints.swift in Sources */,
 				0781E11321CA5C790040FB1E /* SearchVC+Delegates.swift in Sources */,
 				0781E10A21CA573D0040FB1E /* User.swift in Sources */,
+				0781E11921CA7C7B0040FB1E /* UserDetailsVC.swift in Sources */,
 				0781E0BC21CA50160040FB1E /* AppDelegate.swift in Sources */,
 				0781E0ED21CA51C30040FB1E /* UIView+Extension.swift in Sources */,
 				0781E0F521CA51CD0040FB1E /* LoadingView.swift in Sources */,
+				0781E11C21CA7CDD0040FB1E /* ActivityIndicator.swift in Sources */,
+				0781E11E21CA7D070040FB1E /* UIView+Constraint+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
