@@ -54,8 +54,8 @@ class PagingViewModel<T, E> where T:Decodable {
         //Figure out next page number to be loaded
         let nextPage = lastPageLoaded + 1
         
-        //Do not load, if last data task is already in progress.
-        guard dataTask?.state != .running else { return (true, nextPage) }
+//        //Do not load, if last data task is already in progress.
+//        guard dataTask?.state != .running else { return (true, nextPage) }
 
         //Add `if` statement and load, only if next page is available.
         //--
@@ -79,7 +79,9 @@ class PagingViewModel<T, E> where T:Decodable {
         
         let parameter: QueryParameter = [.query: query]
         
-        guard let url = URLManager.getURLForEndpoint(endPoint, query: parameter) else { return }
+        dataTask?.cancel()
+        
+        guard let url = URLManager.getURLForEndpoint(endPoint, query: parameter, pageNumber: page) else { return }
         
         dataTask = networkManager.dataTaskFromURL(url,
                                                   completion: { [weak self] (result: Result<Response<[T]>>) in

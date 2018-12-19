@@ -11,9 +11,7 @@ struct Configuration {
     // Mark: - App Configuration
     
     static let url = "https://api.github.com/"
-    
-    static let pageSize = 15
-    
+        
     // Mark: - Initializer
     
     private init() { }      //Private, init not allowed

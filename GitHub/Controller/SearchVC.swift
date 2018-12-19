@@ -58,7 +58,9 @@ class SearchVC: UIViewController {
                     self?.loaderView.hide()
                 } else if let error = error {
                     if page == 0 {
-                        self?.showErrorAlert(with: error.localizedDescription)
+                        if (error as NSError).code != NSURLErrorCancelled {
+                            self?.showErrorAlert(with: error.localizedDescription)
+                        }
                     } else {
                         self?.loaderView.showMessage("Error loading data.", animateLoader: false, autoHide: 5.0)
                     }
