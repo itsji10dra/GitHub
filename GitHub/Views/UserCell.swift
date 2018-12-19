@@ -14,7 +14,7 @@ class UserCell: UITableViewCell {
     
     @IBOutlet weak var usernameLabel: UILabel!
     
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel?
 
     @IBOutlet weak var typeIconImageView: UIImageView!
 

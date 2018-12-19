@@ -19,7 +19,6 @@ class FollowersListVC: UIViewController {
     struct ListDisplayModel {
         let username: String
         let profileURL: URL
-        let score: String
         let typeIcon: UIImage
     }
     
@@ -34,6 +33,7 @@ class FollowersListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        followersTableView.tableFooterView = UIView()
         loadFollowers()
     }
     
@@ -93,7 +93,6 @@ extension FollowersListVC: UITableViewDelegate, UITableViewDataSource {
         let user = followersArray[indexPath.row]
         
         cell?.usernameLabel?.text = user.username
-        cell?.scoreLabel?.text = user.score
         cell?.profileImageView.setImage(with: user.profileURL, placeholder: nil)
         cell?.typeIconImageView.image = user.typeIcon
         

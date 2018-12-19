@@ -52,7 +52,6 @@ class FollowersViewModel {
                 
                 let followers = users.map { FollowersListVC.ListDisplayModel(username: $0.login,
                                                                              profileURL: $0.avatarURL,
-                                                                             score: "\($0.score ?? 0.0)",
                                                                              typeIcon: $0.type.iconImage) }
                 
                 completion(followers, nil)

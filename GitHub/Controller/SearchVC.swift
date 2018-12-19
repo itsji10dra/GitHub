@@ -44,7 +44,9 @@ class SearchVC: UIViewController {
                                                  profileURL: $0.avatarURL,
                                                  score: "\($0.score ?? 0.0)",
                                                  typeIcon: $0.type.iconImage) }
-            })
+        })
+        
+        usersTableView.tableFooterView = UIView()   //For hiding empty cells...
     }
     
     deinit {
