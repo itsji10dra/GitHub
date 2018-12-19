@@ -63,7 +63,7 @@ extension EndPoint {
 
 extension EndPoint {
     
-    private var endpointPaths: [EndPointPath] {     //This includes array of paths parameters, for `errorMessage` to be null.
+    private var endpointPaths: [EndPointPath] {     //This includes array of paths parameters, for status-code 200.
         switch self {
         case .user:
             return [.username]

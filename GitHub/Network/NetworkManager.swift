@@ -34,7 +34,7 @@ class NetworkManager {
     public func dataTaskFromURL<T: Decodable>(_ url: URL, completion: @escaping ((Result<T>) -> Void)) -> URLSessionDataTask {
         
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(DateFormatter.formatter)
+        decoder.dateDecodingStrategy = .formatted(DateFormatter.gitHubDateFormatter)
 
         return session.dataTask(with: url, completionHandler: { (data, response, error) in
             

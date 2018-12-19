@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class UserDetailsVC: UIViewController {
 
@@ -55,6 +56,7 @@ class UserDetailsVC: UIViewController {
     // MARK: - Private Method
 
     private func customiseUI() {
+        contentScrollView.contentInset = .init(top: 20, left: 0, bottom: 20, right: 0)
         profileImageView.layer.cornerRadius = profileImageView.bounds.width/2;
     }
     
@@ -96,5 +98,12 @@ class UserDetailsVC: UIViewController {
                      DetailInfoView(title: "Created At:", text: details.createdDate ?? "NA")]
 
         views.forEach { view in contentStackView.addArrangedSubview(view) }
+        
+        let showFollowers = DetailActionView(title: "Show Followers", action: { [unowned self] in
+            
+        })
+
+        let actionViews = [showFollowers]
+        actionViews.forEach { view in contentStackView.addArrangedSubview(view) }
     }
 }
