@@ -26,10 +26,9 @@ extension SearchVC: UIScrollViewDelegate {
         
         let bottomEdge = scrollView.contentOffset.y + scrollView.frame.height
         
-        if bottomEdge >= scrollView.contentSize.height {    //We reached bottom
-            if let query = searchBar.text {
+        if bottomEdge >= scrollView.contentSize.height,             //We reached bottom
+            let query = searchBar.text, query.isEmpty == false {
                 loadUsers(query: query)
-            }
         }
     }
 }

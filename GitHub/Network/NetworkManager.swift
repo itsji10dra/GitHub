@@ -18,7 +18,7 @@ class NetworkManager {
     // MARK: - Properties
     
     private var session: URLSession!
-    
+        
     // MARK: - Initializer
     
     init(session: URLSession = URLSession(configuration: .ephemeral)) {
@@ -33,15 +33,18 @@ class NetworkManager {
     
     public func dataTaskFromURL<T: Decodable>(_ url: URL, completion: @escaping ((Result<T>) -> Void)) -> URLSessionDataTask {
         
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(DateFormatter.formatter)
+
         return session.dataTask(with: url, completionHandler: { (data, response, error) in
             
             if error == nil,
                 let data = data {
                 do {
-                    let response = try JSONDecoder().decode(T.self, from: data)
+                    let response = try decoder.decode(T.self, from: data)
                     completion(.success(response))
                 } catch let parsingError {
-                    print(parsingError)
+                    print(url, parsingError)
                     completion(.failure(parsingError))
                 }
             } else if let error = error {

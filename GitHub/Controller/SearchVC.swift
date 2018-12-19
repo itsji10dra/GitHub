@@ -42,7 +42,7 @@ class SearchVC: UIViewController {
                                                               transform: { result -> [UserListDisplayModel] in
             return result.map { UserListDisplayModel(username: $0.login,
                                                      profileURL: $0.avatarURL,
-                                                     score: "\($0.score)",
+                                                     score: "\($0.score ?? 0.0)",
                                                      typeIcon: $0.type.iconImage) }
             })
     }
@@ -97,7 +97,7 @@ class SearchVC: UIViewController {
                                                 preferredStyle: .alert)
         
         let retryAction = UIAlertAction(title: "Retry", style: .default) { [unowned self] _ in
-            if let query = self.searchBar.text {
+            if let query = self.searchBar.text, query.isEmpty == false {
                 self.loadUsers(query: query)
             }
         }
@@ -112,9 +112,10 @@ class SearchVC: UIViewController {
     // MARK: - Navigation
     
     internal func pushDetailsScene(with info: User) {
+        
         guard let detailsVC = Navigation.getViewController(type: UserDetailsVC.self,
-                                                            identifer: "UserDetails") else { return }
-//        detailsVC.sectionInfo = info
+                                                           identifer: "UserDetails") else { return }
+        detailsVC.detailsViewModel = DetailsViewModel(username: info.login)
         navigationController?.pushViewController(detailsVC, animated: true)
     }
 }

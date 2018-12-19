@@ -22,7 +22,7 @@ struct User: Decodable {
     let receivedEventsURL: String
     let type: UserType
     let siteAdmin: Bool
-    let score: Double
+    let score: Double?
     let name: String?
     let company: String?
     let blog: String?

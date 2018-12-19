@@ -25,8 +25,10 @@ class PagingViewModel<T, E> where T:Decodable {
     
     private lazy var networkManager = NetworkManager()
     
-    private var lastPageLoaded: Int = -1
+    private var lastPageNumberLoaded: Int = -1
     
+    private var loadedAllData: Bool = false
+
     // MARK: - Public Properties
     
     private let transform: (([T]) -> [E])
@@ -52,14 +54,11 @@ class PagingViewModel<T, E> where T:Decodable {
     public func loadMoreData(query: String, handler: @escaping PagingDataResult) -> (isLoading: Bool, page: Int) {
         
         //Figure out next page number to be loaded
-        let nextPage = lastPageLoaded + 1
+        let nextPage = lastPageNumberLoaded + 1
         
-//        //Do not load, if last data task is already in progress.
-//        guard dataTask?.state != .running else { return (true, nextPage) }
+        //Load only if next page is available
+        guard loadedAllData == false else { return (false, nextPage) }
 
-        //Add `if` statement and load, only if next page is available.
-        //--
-            
         //Load next page
         loadData(query: query, page: UInt(nextPage), completionHandler: handler)
         
@@ -71,7 +70,9 @@ class PagingViewModel<T, E> where T:Decodable {
     }
     
     public func clearDataSource() {
-        lastPageLoaded = -1
+        dataTask?.cancel()
+        loadedAllData = false
+        lastPageNumberLoaded = -1
         receivedDataSource.removeAll()
     }
     
@@ -96,9 +97,11 @@ class PagingViewModel<T, E> where T:Decodable {
                 
                 let users = response.data
                 
+                self?.loadedAllData = users.isEmpty
+                
                 guard let data = self?.transform(users) else { return completionHandler([], nil, page) }
                 
-                self?.lastPageLoaded = Int(page)
+                self?.lastPageNumberLoaded = Int(page)
                                 
                 self?.receivedDataSource.append(contentsOf: users)
 
