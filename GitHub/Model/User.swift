@@ -13,15 +13,16 @@ struct User: Decodable {
     let login: String
     let id: Int
     let nodeId: String
-    let avatarURL: String
+    let avatarURL: URL
     let gravatarId: String
-    let url, htmlURL, followersURL: String
+    let url, htmlURL, followersURL: URL
     let followingURL, gistsURL, starredURL: String
-    let subscriptionsURL, organizationsURL, reposURL: String
+    let subscriptionsURL, organizationsURL, reposURL: URL
     let eventsURL: String
     let receivedEventsURL: String
-    let type: String
+    let type: UserType
     let siteAdmin: Bool
+    let score: Double
     let name: String?
     let company: String?
     let blog: String?
@@ -50,6 +51,7 @@ struct User: Decodable {
         case receivedEventsURL = "received_events_url"
         case type
         case siteAdmin = "site_admin"
+        case score
         case name, company, blog, location, email, hireable, bio
         case publicRepos = "public_repos"
         case publicGists = "public_gists"

@@ -21,7 +21,10 @@ class SearchVC: UIViewController {
     // MARK: - Data
     
     struct UserListDisplayModel {
-        let name: String
+        let username: String
+        let profileURL: URL
+        let score: String
+        let typeIcon: UIImage
     }
     
     internal let cellIdentifier = "UserCell"
@@ -37,8 +40,11 @@ class SearchVC: UIViewController {
 
         pagingModel = PagingViewModel<User, UserListDisplayModel>(endPoint: .searchUsers,
                                                               transform: { result -> [UserListDisplayModel] in
-            return result.map { UserListDisplayModel(name: $0.login) }
-        })
+            return result.map { UserListDisplayModel(username: $0.login,
+                                                     profileURL: $0.avatarURL,
+                                                     score: "\($0.score)",
+                                                     typeIcon: UIImage()) }
+            })
     }
     
     deinit {
@@ -96,7 +102,10 @@ class SearchVC: UIViewController {
             }
         }
         alertController.addAction(retryAction)
-        
+
+        let cancelAction = UIAlertAction(title: "Dismiss", style: .cancel)
+        alertController.addAction(cancelAction)
+
         present(alertController, animated: true, completion: nil)
     }
 }

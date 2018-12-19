@@ -43,13 +43,16 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? UserCell
         
         let user = usersArray[indexPath.row]
         
-        cell.textLabel?.text = user.name
+        cell?.usernameLabel?.text = user.username
+        cell?.scoreLabel?.text = user.score
+
+//        cell
         
-        return cell;
+        return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

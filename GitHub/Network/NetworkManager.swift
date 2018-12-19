@@ -41,7 +41,7 @@ class NetworkManager {
                     let response = try JSONDecoder().decode(T.self, from: data)
                     completion(.success(response))
                 } catch let parsingError {
-//                    print(parsingError)
+                    print(parsingError)
                     completion(.failure(parsingError))
                 }
             } else if let error = error {

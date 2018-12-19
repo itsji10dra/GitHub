@@ -35,14 +35,54 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="547"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="60" id="Uj8-sm-lM0" customClass="UserCell" customModule="GitHub" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="91" id="Uj8-sm-lM0" customClass="UserCell" customModule="GitHub" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="91"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uj8-sm-lM0" id="LQO-zQ-cZu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="90.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0ja-Sd-jZJ">
+                                                            <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="5Ca-9J-5H6"/>
+                                                                <constraint firstAttribute="height" constant="50" id="GgX-WE-WfG"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MqX-Us-88q">
+                                                            <rect key="frame" x="65" y="10" width="267" height="38.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnC-k8-3P0">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="267" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaO-oe-n1y">
+                                                                    <rect key="frame" x="0.0" y="20.5" width="267" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="MqX-Us-88q" firstAttribute="leading" secondItem="0ja-Sd-jZJ" secondAttribute="trailing" constant="5" id="GT7-E6-l34"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="0ja-Sd-jZJ" secondAttribute="bottom" constant="10" id="NmZ-l9-LY2"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="MqX-Us-88q" secondAttribute="bottom" constant="10" id="UZv-3e-s4m"/>
+                                                        <constraint firstAttribute="trailing" secondItem="MqX-Us-88q" secondAttribute="trailing" constant="10" id="UjJ-wJ-p6u"/>
+                                                        <constraint firstItem="0ja-Sd-jZJ" firstAttribute="top" secondItem="LQO-zQ-cZu" secondAttribute="top" constant="10" id="iEB-Pz-nFy"/>
+                                                        <constraint firstItem="0ja-Sd-jZJ" firstAttribute="leading" secondItem="LQO-zQ-cZu" secondAttribute="leading" constant="10" id="jUW-YS-WN9"/>
+                                                        <constraint firstItem="MqX-Us-88q" firstAttribute="top" secondItem="0ja-Sd-jZJ" secondAttribute="top" id="mOz-0a-JRJ"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
                                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <connections>
+                                                    <outlet property="profileImageView" destination="0ja-Sd-jZJ" id="0B7-Ts-D8j"/>
+                                                    <outlet property="scoreLabel" destination="GaO-oe-n1y" id="78W-E5-FZw"/>
+                                                    <outlet property="usernameLabel" destination="hnC-k8-3P0" id="Nma-1o-G7h"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
@@ -50,7 +90,7 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="4Rt-xa-qwO"/>
                                         </connections>
                                     </tableView>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2R-FO-TC7" customClass="LoadingView" customModule="FireCache_Example" customModuleProvider="target">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2R-FO-TC7" customClass="LoadingView" customModule="GitHub" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>

@@ -30,6 +30,7 @@
 		0781E11921CA7C7B0040FB1E /* UserDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E11821CA7C7B0040FB1E /* UserDetailsVC.swift */; };
 		0781E11C21CA7CDD0040FB1E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E11B21CA7CDD0040FB1E /* ActivityIndicator.swift */; };
 		0781E11E21CA7D070040FB1E /* UIView+Constraint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E11D21CA7D070040FB1E /* UIView+Constraint+Extension.swift */; };
+		0781E12021CA85A90040FB1E /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E11F21CA85A90040FB1E /* UserType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		0781E11821CA7C7B0040FB1E /* UserDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsVC.swift; sourceTree = "<group>"; };
 		0781E11B21CA7CDD0040FB1E /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		0781E11D21CA7D070040FB1E /* UIView+Constraint+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint+Extension.swift"; sourceTree = "<group>"; };
+		0781E11F21CA85A90040FB1E /* UserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,8 +210,9 @@
 		0781E10B21CA57410040FB1E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0781E10921CA573D0040FB1E /* User.swift */,
 				0781E10C21CA59820040FB1E /* Response.swift */,
+				0781E10921CA573D0040FB1E /* User.swift */,
+				0781E11F21CA85A90040FB1E /* UserType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				0781E10A21CA573D0040FB1E /* User.swift in Sources */,
 				0781E11921CA7C7B0040FB1E /* UserDetailsVC.swift in Sources */,
 				0781E0BC21CA50160040FB1E /* AppDelegate.swift in Sources */,
+				0781E12021CA85A90040FB1E /* UserType.swift in Sources */,
 				0781E0ED21CA51C30040FB1E /* UIView+Extension.swift in Sources */,
 				0781E0F521CA51CD0040FB1E /* LoadingView.swift in Sources */,
 				0781E11C21CA7CDD0040FB1E /* ActivityIndicator.swift in Sources */,
