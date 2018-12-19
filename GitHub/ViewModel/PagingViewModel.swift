@@ -19,6 +19,8 @@ class PagingViewModel<T, E> where T:Decodable {
     
     // MARK: - Private Properties
     
+    private lazy var receivedDataSource: [T] = []
+
     private lazy var dataSource: [E] = []
     
     private var dataTask: URLSessionDataTask?
@@ -66,6 +68,10 @@ class PagingViewModel<T, E> where T:Decodable {
         return (true, nextPage)
     }
     
+    public func dataSource(at index: Int) -> T? {
+        return index < receivedDataSource.count ? receivedDataSource[index] : nil
+    }
+    
     public func clearDataSource() {
         lastPageLoaded = -1
         dataSource.removeAll()
@@ -98,6 +104,8 @@ class PagingViewModel<T, E> where T:Decodable {
                 
                 self?.dataSource.append(contentsOf: data)
                 
+                self?.receivedDataSource.append(contentsOf: users)
+
                 completionHandler(self?.dataSource, nil, UInt(page))
                 
             case .failure(let error):

@@ -108,5 +108,14 @@ class SearchVC: UIViewController {
 
         present(alertController, animated: true, completion: nil)
     }
+    
+    // MARK: - Navigation
+    
+    internal func pushDetailsScene(with info: User) {
+        guard let detailsVC = Navigation.getViewController(type: UserDetailsVC.self,
+                                                            identifer: "UserDetails") else { return }
+//        detailsVC.sectionInfo = info
+        navigationController?.pushViewController(detailsVC, animated: true)
+    }
 }
 

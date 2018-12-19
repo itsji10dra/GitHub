@@ -1,0 +1,16 @@
+PODS:
+  - FireCache (0.1.0)
+
+DEPENDENCIES:
+  - FireCache
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FireCache
+
+SPEC CHECKSUMS:
+  FireCache: a74ce8d23768df0a7d7526ef49f32c259c1cb9b1
+
+PODFILE CHECKSUM: 86d05fe214393808cd6140b74b198ae7de6cf914
+
+COCOAPODS: 1.5.3

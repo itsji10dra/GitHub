@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FireCache
 
 extension SearchVC: UISearchBarDelegate {
 
@@ -49,13 +50,14 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
         
         cell?.usernameLabel?.text = user.username
         cell?.scoreLabel?.text = user.score
-
-//        cell
+        cell?.profileImageView.setImage(with: user.profileURL, placeholder: nil)
         
         return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        guard let infoObj = pagingModel.dataSource(at: indexPath.row) else { return }
+        pushDetailsScene(with: infoObj)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

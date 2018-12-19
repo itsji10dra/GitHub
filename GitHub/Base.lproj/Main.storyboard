@@ -10,6 +10,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="gMW-Dl-Cfd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G0k-lh-Dpg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mO7-XE-YP2">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BNq-qA-CVa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QJz-zt-7J6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="-564.46776611694156"/>
+        </scene>
         <!--Search User-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,7 +36,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Search username here..." translatesAutoresizingMaskIntoConstraints="NO" id="hbD-e5-p6k">
+                            <searchBar contentMode="redraw" placeholder="Search here..." translatesAutoresizingMaskIntoConstraints="NO" id="hbD-e5-p6k">
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="qTP-qL-qzb"/>
@@ -42,24 +60,29 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="342" height="90.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0ja-Sd-jZJ">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0ja-Sd-jZJ">
                                                             <rect key="frame" x="10" y="10" width="50" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="50" id="5Ca-9J-5H6"/>
                                                                 <constraint firstAttribute="height" constant="50" id="GgX-WE-WfG"/>
                                                             </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="25"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MqX-Us-88q">
-                                                            <rect key="frame" x="65" y="10" width="267" height="38.5"/>
+                                                            <rect key="frame" x="68" y="10" width="264" height="38.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnC-k8-3P0">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="267" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="264" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaO-oe-n1y">
-                                                                    <rect key="frame" x="0.0" y="20.5" width="267" height="18"/>
+                                                                    <rect key="frame" x="0.0" y="20.5" width="264" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -68,7 +91,7 @@
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="MqX-Us-88q" firstAttribute="leading" secondItem="0ja-Sd-jZJ" secondAttribute="trailing" constant="5" id="GT7-E6-l34"/>
+                                                        <constraint firstItem="MqX-Us-88q" firstAttribute="leading" secondItem="0ja-Sd-jZJ" secondAttribute="trailing" constant="8" id="GT7-E6-l34"/>
                                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="0ja-Sd-jZJ" secondAttribute="bottom" constant="10" id="NmZ-l9-LY2"/>
                                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="MqX-Us-88q" secondAttribute="bottom" constant="10" id="UZv-3e-s4m"/>
                                                         <constraint firstAttribute="trailing" secondItem="MqX-Us-88q" secondAttribute="trailing" constant="10" id="UjJ-wJ-p6u"/>
@@ -106,7 +129,7 @@
                             <constraint firstItem="jZs-UE-SXv" firstAttribute="top" secondItem="hbD-e5-p6k" secondAttribute="bottom" id="1hc-Xo-qe1"/>
                             <constraint firstItem="hbD-e5-p6k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Oti-Dj-dji"/>
                             <constraint firstAttribute="trailing" secondItem="jZs-UE-SXv" secondAttribute="trailing" id="Z4r-mj-kT3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jZs-UE-SXv" secondAttribute="bottom" id="fWe-1i-fJp"/>
+                            <constraint firstAttribute="bottom" secondItem="jZs-UE-SXv" secondAttribute="bottom" id="fWe-1i-fJp"/>
                             <constraint firstItem="hbD-e5-p6k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sJI-fy-PIM"/>
                             <constraint firstItem="hbD-e5-p6k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uM7-ye-Qj9"/>
                         </constraints>
@@ -124,10 +147,10 @@
             </objects>
             <point key="canvasLocation" x="940" y="-564.46776611694156"/>
         </scene>
-        <!--View Controller-->
+        <!--User DetailsVC-->
         <scene sceneID="2U4-XN-ZYw">
             <objects>
-                <viewController id="7aP-Da-74c" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserDetails" id="7aP-Da-74c" customClass="UserDetailsVC" customModule="GitHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6iP-dF-8Te">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,24 +161,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0C-f2-Z1Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1833" y="-562"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="gMW-Dl-Cfd">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G0k-lh-Dpg" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mO7-XE-YP2">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BNq-qA-CVa"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QJz-zt-7J6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="-564.46776611694156"/>
         </scene>
     </scenes>
 </document>
