@@ -21,6 +21,8 @@ class UserDetailsVC: UIViewController {
 
     @IBOutlet weak var contentStackView: UIStackView!
     
+    @IBOutlet weak var profileViewHolderHeightConstraint: NSLayoutConstraint!
+    
     // MARK: - Data
     
     struct DetailsDisplayModel {
@@ -37,7 +39,7 @@ class UserDetailsVC: UIViewController {
         let publicGistCount: Int
         let followersCount: Int
         let followingCount: Int
-        let createdDate: String?
+        let updatedDate: String?
     }
     
     internal var detailsViewModel: DetailsViewModel!
@@ -74,7 +76,7 @@ class UserDetailsVC: UIViewController {
                 if let details = details {
                     self?.loadDetailsInUI(using: details)
                 } else if let error = error {
-                    
+                    self?.showErrorAlert(with: error.localizedDescription)
                 }
             }
         }
@@ -93,17 +95,46 @@ class UserDetailsVC: UIViewController {
                      DetailInfoView(title: "Bio:", text: details.bio ?? "NA"),
                      DetailInfoView(title: "Public Repos:", text: "\(details.publicRepoCount)"),
                      DetailInfoView(title: "Public Gists:", text: "\(details.publicGistCount)"),
-                     DetailInfoView(title: "Followers:", text: "\(details.followersCount)"),
+                     DetailInfoView(title: "Followers:", text: "\(details.followersCount)", action: { [unowned self] in self.loadFollowers() }),
                      DetailInfoView(title: "Following:", text: "\(details.followingCount)"),
-                     DetailInfoView(title: "Created At:", text: details.createdDate ?? "NA")]
+                     DetailInfoView(title: "Last Updated:", text: details.updatedDate ?? "NA")]
 
         views.forEach { view in contentStackView.addArrangedSubview(view) }
-        
-        let showFollowers = DetailActionView(title: "Show Followers", action: { [unowned self] in
-            
-        })
-
-        let actionViews = [showFollowers]
-        actionViews.forEach { view in contentStackView.addArrangedSubview(view) }
     }
+    
+    private func loadFollowers() {
+        pushFollowersScene(username: detailsViewModel.username)
+    }
+    
+    // MARK: - Alerts
+    
+    private func showErrorAlert(with message: String) {
+        
+        let alertController = UIAlertController(title: "Error",
+                                                message: message,
+                                                preferredStyle: .alert)
+        
+        let retryAction = UIAlertAction(title: "Retry", style: .default) { [unowned self] _ in
+            self.loadDetails()
+        }
+        alertController.addAction(retryAction)
+        
+        let cancelAction = UIAlertAction(title: "Dismiss", style: .cancel){ [unowned self] _ in
+            self.navigationController?.popViewController(animated: false)
+        }
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    // MARK: - Navigation
+    
+    internal func pushFollowersScene(username: String) {
+        
+        guard let followersVC = Navigation.getViewController(type: FollowersListVC.self,
+                                                           identifer: "FollowersList") else { return }
+//        detailsVC.detailsViewModel = DetailsViewModel(username: info.login)
+        navigationController?.pushViewController(followersVC, animated: true)
+    }
+
 }

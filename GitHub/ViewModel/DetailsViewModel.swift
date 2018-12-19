@@ -63,7 +63,7 @@ class DetailsViewModel {
                                                                 publicGistCount: user.publicGists ?? 0,
                                                                 followersCount: user.followers ?? 0,
                                                                 followingCount: user.following ?? 0,
-                                                                createdDate: user.createdAt?.description)
+                                                                updatedDate: user.updatedAt?.description)
                 
                 completion(details, nil)
                 

@@ -37,8 +37,7 @@
 		0781E12621CAAA920040FB1E /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E12521CAAA920040FB1E /* DateFormatter+Extension.swift */; };
 		0781E12821CAAC450040FB1E /* DetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E12721CAAC450040FB1E /* DetailInfoView.swift */; };
 		0781E12A21CAAC5A0040FB1E /* DetailInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0781E12921CAAC5A0040FB1E /* DetailInfoView.xib */; };
-		0781E12F21CAC9C20040FB1E /* DetailActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E12D21CAC9C20040FB1E /* DetailActionView.swift */; };
-		0781E13021CAC9C20040FB1E /* DetailActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0781E12E21CAC9C20040FB1E /* DetailActionView.xib */; };
+		0781E13221CAD1970040FB1E /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E13121CAD1970040FB1E /* FollowersListVC.swift */; };
 		B206B8C428FF41C935A2045C /* Pods_GitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C6B7B84A7E5F383559ED11 /* Pods_GitHub.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,8 +86,7 @@
 		0781E12521CAAA920040FB1E /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		0781E12721CAAC450040FB1E /* DetailInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoView.swift; sourceTree = "<group>"; };
 		0781E12921CAAC5A0040FB1E /* DetailInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailInfoView.xib; sourceTree = "<group>"; };
-		0781E12D21CAC9C20040FB1E /* DetailActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailActionView.swift; sourceTree = "<group>"; };
-		0781E12E21CAC9C20040FB1E /* DetailActionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailActionView.xib; sourceTree = "<group>"; };
+		0781E13121CAD1970040FB1E /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
 		14B2E0D4B1BA45F4A9BAE6BC /* Pods-GitHubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubTests/Pods-GitHubTests.release.xcconfig"; sourceTree = "<group>"; };
 		36E4D194A9A7BD0163C0C0D9 /* Pods-GitHubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubTests/Pods-GitHubTests.debug.xcconfig"; sourceTree = "<group>"; };
 		36FA0061663C0C5E17AEB618 /* Pods-GitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub/Pods-GitHub.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +179,7 @@
 				0781E0BD21CA50160040FB1E /* SearchVC.swift */,
 				0781E11221CA5C790040FB1E /* SearchVC+Delegates.swift */,
 				0781E11821CA7C7B0040FB1E /* UserDetailsVC.swift */,
+				0781E13121CAD1970040FB1E /* FollowersListVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -200,7 +199,6 @@
 			children = (
 				0781E0F021CA51CD0040FB1E /* LoadingView */,
 				0781E12B21CAAC640040FB1E /* DetailInfoView */,
-				0781E12C21CAC9C20040FB1E /* DetailActionView */,
 				0781E11621CA5EBD0040FB1E /* UserCell.swift */,
 			);
 			path = Views;
@@ -262,15 +260,6 @@
 				0781E12921CAAC5A0040FB1E /* DetailInfoView.xib */,
 			);
 			path = DetailInfoView;
-			sourceTree = "<group>";
-		};
-		0781E12C21CAC9C20040FB1E /* DetailActionView */ = {
-			isa = PBXGroup;
-			children = (
-				0781E12D21CAC9C20040FB1E /* DetailActionView.swift */,
-				0781E12E21CAC9C20040FB1E /* DetailActionView.xib */,
-			);
-			path = DetailActionView;
 			sourceTree = "<group>";
 		};
 		6024F9932A6A8D0DC30902B8 /* Pods */ = {
@@ -378,7 +367,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0781E0C621CA50180040FB1E /* LaunchScreen.storyboard in Resources */,
-				0781E13021CAC9C20040FB1E /* DetailActionView.xib in Resources */,
 				0781E0F421CA51CD0040FB1E /* LoadingView.xib in Resources */,
 				0781E0C321CA50180040FB1E /* Assets.xcassets in Resources */,
 				0781E0C121CA50160040FB1E /* Main.storyboard in Resources */,
@@ -477,6 +465,7 @@
 				0781E10521CA53060040FB1E /* EndPointPath.swift in Sources */,
 				0781E10D21CA59820040FB1E /* Response.swift in Sources */,
 				0781E12821CAAC450040FB1E /* DetailInfoView.swift in Sources */,
+				0781E13221CAD1970040FB1E /* FollowersListVC.swift in Sources */,
 				0781E12221CA89760040FB1E /* Navigation.swift in Sources */,
 				0781E0FE21CA529E0040FB1E /* NetworkManager.swift in Sources */,
 				0781E11721CA5EBD0040FB1E /* UserCell.swift in Sources */,
@@ -486,7 +475,6 @@
 				0781E10A21CA573D0040FB1E /* User.swift in Sources */,
 				0781E11921CA7C7B0040FB1E /* UserDetailsVC.swift in Sources */,
 				0781E0BC21CA50160040FB1E /* AppDelegate.swift in Sources */,
-				0781E12F21CAC9C20040FB1E /* DetailActionView.swift in Sources */,
 				0781E12021CA85A90040FB1E /* UserType.swift in Sources */,
 				0781E0ED21CA51C30040FB1E /* UIView+Extension.swift in Sources */,
 				0781E0F521CA51CD0040FB1E /* LoadingView.swift in Sources */,
