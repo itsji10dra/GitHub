@@ -49,6 +49,7 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
         cell?.usernameLabel?.text = user.username
         cell?.scoreLabel?.text = user.score
         cell?.profileImageView.setImage(with: user.profileURL, placeholder: nil)
+        cell?.typeIconImageView.image = user.typeIcon
         
         return cell ?? UITableViewCell()
     }

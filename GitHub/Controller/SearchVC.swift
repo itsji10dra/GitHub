@@ -43,7 +43,7 @@ class SearchVC: UIViewController {
             return result.map { UserListDisplayModel(username: $0.login,
                                                      profileURL: $0.avatarURL,
                                                      score: "\($0.score)",
-                                                     typeIcon: UIImage()) }
+                                                     typeIcon: $0.type.iconImage) }
             })
     }
     
