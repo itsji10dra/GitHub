@@ -20,7 +20,7 @@ class SearchVC: UIViewController {
 
     // MARK: - Data
     
-    struct UserListDisplayModel {
+    struct ListDisplayModel {
         let username: String
         let profileURL: URL
         let score: String
@@ -29,21 +29,21 @@ class SearchVC: UIViewController {
     
     internal let cellIdentifier = "UserCell"
     
-    internal lazy var usersArray: [UserListDisplayModel] = []
+    internal lazy var usersArray: [ListDisplayModel] = []
     
-    internal var pagingModel: PagingViewModel<User, UserListDisplayModel>!
+    internal var pagingModel: PagingViewModel<User, ListDisplayModel>!
     
     // MARK: - View Hierarchy
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        pagingModel = PagingViewModel<User, UserListDisplayModel>(endPoint: .searchUsers,
-                                                              transform: { result -> [UserListDisplayModel] in
-            return result.map { UserListDisplayModel(username: $0.login,
-                                                     profileURL: $0.avatarURL,
-                                                     score: "\($0.score ?? 0.0)",
-                                                     typeIcon: $0.type.iconImage) }
+        pagingModel = PagingViewModel<User, ListDisplayModel>(endPoint: .searchUsers,
+                                                              transform: { result -> [ListDisplayModel] in
+            return result.map { ListDisplayModel(username: $0.login,
+                                                 profileURL: $0.avatarURL,
+                                                 score: "\($0.score ?? 0.0)",
+                                                 typeIcon: $0.type.iconImage) }
             })
     }
     

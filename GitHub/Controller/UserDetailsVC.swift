@@ -133,7 +133,7 @@ class UserDetailsVC: UIViewController {
         
         guard let followersVC = Navigation.getViewController(type: FollowersListVC.self,
                                                            identifer: "FollowersList") else { return }
-//        detailsVC.detailsViewModel = DetailsViewModel(username: info.login)
+        followersVC.followersViewModel = FollowersViewModel(username: username)
         navigationController?.pushViewController(followersVC, animated: true)
     }
 
