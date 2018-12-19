@@ -21,16 +21,16 @@ struct User: Decodable {
     let eventsURL: String
     let receivedEventsURL: String
     let type: String
-    let siteAdmin: Bool
-    let name: String
+    private(set) var siteAdmin: Bool = false
+    let name: String?
     let company: String?
-    let blog: String
-    let location: String
+    let blog: String?
+    let location: String?
     let email: String?
-    let hireable: Bool
-    let bio: String
-    let publicRepos, publicGists, followers, following: Int
-    let createdAt, updatedAt: Date
+    private(set) var hireable: Bool? = false
+    let bio: String?
+    let publicRepos, publicGists, followers, following: Int?
+    let createdAt, updatedAt: Date?
     
     enum CodingKeys: String, CodingKey {
         case login, id

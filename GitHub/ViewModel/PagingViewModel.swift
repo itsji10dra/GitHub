@@ -49,7 +49,7 @@ class PagingViewModel<T, E> where T:Decodable {
     // MARK: - Public Methods
     
     @discardableResult
-    public func loadMoreData(handler: @escaping PagingDataResult) -> (isLoading: Bool, page: Int) {
+    public func loadMoreData(query: String, handler: @escaping PagingDataResult) -> (isLoading: Bool, page: Int) {
         
         //Figure out next page number to be loaded
         let nextPage = lastPageLoaded + 1
@@ -61,7 +61,7 @@ class PagingViewModel<T, E> where T:Decodable {
         //--
             
         //Load next page
-        loadData(page: UInt(nextPage), completionHandler: handler)
+        loadData(query: query, page: UInt(nextPage), completionHandler: handler)
         
         return (true, nextPage)
     }
@@ -73,30 +73,34 @@ class PagingViewModel<T, E> where T:Decodable {
     
     // MARK: - Private Methods
     
-    private func loadData(page number: UInt = 0, completionHandler: @escaping PagingDataResult) {
+    private func loadData(query: String, page: UInt = 0, completionHandler: @escaping PagingDataResult) {
         
-        print("Loading Page:", number, " ↔️ Endpoint:", endPoint.rawValue)
+        print("Loading Page:", page, " ↔️ Endpoint:", endPoint.rawValue)
         
-        guard let url = URLManager.getURLForEndpoint(endPoint, path: nil) else { return }
+        let parameter: QueryParameter = [.query: query]
+        
+        guard let url = URLManager.getURLForEndpoint(endPoint, query: parameter) else { return }
         
         dataTask = networkManager.dataTaskFromURL(url,
-                                                  completion: { [weak self] (result: Result<[T]>) in
+                                                  completion: { [weak self] (result: Result<Response<[T]>>) in
                                                     
             switch result {
             case .success(let response):
-                print(" • Page:", number, " success")
+                print(" • Page:", page, " success")
                 
-                guard let data = self?.transform(response) else { return completionHandler([], nil, number) }
+                let users = response.data
                 
-                self?.lastPageLoaded = Int(number)
+                guard let data = self?.transform(users) else { return completionHandler([], nil, page) }
+                
+                self?.lastPageLoaded = Int(page)
                 
                 self?.dataSource.append(contentsOf: data)
                 
-                completionHandler(self?.dataSource, nil, UInt(number))
+                completionHandler(self?.dataSource, nil, UInt(page))
                 
             case .failure(let error):
-                print(" • Page:", number, " failed. Reason: ", error.localizedDescription)
-                completionHandler(nil, error, number)
+                print(" • Page:", page, " failed. Reason: ", error.localizedDescription)
+                completionHandler(nil, error, page)
             }
             
             print("--------------------------------------------------------------------------------------")

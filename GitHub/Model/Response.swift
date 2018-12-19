@@ -19,6 +19,6 @@ struct Response<T>: Decodable where T: Decodable {
     enum CodingKeys: String, CodingKey {
         case totalCount = "total_count"
         case incompleteResults = "incomplete_results"
-        case data
+        case data = "items"
     }
 }

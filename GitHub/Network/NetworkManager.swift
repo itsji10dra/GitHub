@@ -33,6 +33,8 @@ class NetworkManager {
     
     public func dataTaskFromURL<T: Decodable>(_ url: URL, completion: @escaping ((Result<T>) -> Void)) -> URLSessionDataTask {
         
+        print(url)
+        
         return session.dataTask(with: url, completionHandler: { (data, response, error) in
             
             if error == nil,
@@ -41,6 +43,7 @@ class NetworkManager {
                     let response = try JSONDecoder().decode(T.self, from: data)
                     completion(.success(response))
                 } catch let parsingError {
+                    print(parsingError)
                     completion(.failure(parsingError))
                 }
             } else if let error = error {
