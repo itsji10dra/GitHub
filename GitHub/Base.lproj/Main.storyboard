@@ -158,7 +158,7 @@
         <!--User Details-->
         <scene sceneID="2U4-XN-ZYw">
             <objects>
-                <viewController storyboardIdentifier="UserDetails" id="7aP-Da-74c" userLabel="User Details" customClass="UserDetailsVC" customModule="GitHub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserDetails" automaticallyAdjustsScrollViewInsets="NO" id="7aP-Da-74c" userLabel="User Details" customClass="UserDetailsVC" customModule="GitHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6iP-dF-8Te">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

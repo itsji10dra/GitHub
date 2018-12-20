@@ -60,11 +60,11 @@ class UserDetailsVC: UIViewController {
     
     // MARK: - IBOutlets Action
     
-    @IBAction func shareProfileAction(_ sender: Any) {
-        let text = "Username: \(loadedDetails?.username ?? "NA")"
+    @IBAction func shareProfileAction(_ sender: UIBarButtonItem) {
+        let text = "Username: \(loadedDetails?.username ?? "NA"), Profile: \(loadedDetails?.webProfileURL.absoluteString ?? "-")"
         let content = [profileImageView.image as Any, text].compactMap { $0 }
         let activityViewController = UIActivityViewController(activityItems: content, applicationActivities: nil)
-        activityViewController.popoverPresentationController?.sourceView = self.view
+        activityViewController.popoverPresentationController?.barButtonItem = sender
         present(activityViewController, animated: true, completion: nil)
     }
 
