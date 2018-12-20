@@ -47,6 +47,7 @@ class SearchVC: UIViewController {
         })
         
         customiseUI()
+        searchBar.becomeFirstResponder()
     }
     
     deinit {
