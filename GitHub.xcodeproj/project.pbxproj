@@ -77,7 +77,6 @@
 		0781E0CC21CA50180040FB1E /* GitHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0781E0D221CA50180040FB1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0781E0DD21CA511D0040FB1E /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		0781E0DF21CA51390040FB1E /* Assignment.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Assignment.pdf; sourceTree = "<group>"; };
 		0781E0EA21CA51C30040FB1E /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		0781E0F121CA51CD0040FB1E /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		0781E0F221CA51CD0040FB1E /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -148,7 +147,6 @@
 		0781E0AF21CA50160040FB1E = {
 			isa = PBXGroup;
 			children = (
-				0781E0DF21CA51390040FB1E /* Assignment.pdf */,
 				0781E0BA21CA50160040FB1E /* GitHub */,
 				0781E0CF21CA50180040FB1E /* GitHubTests */,
 				0781E0B921CA50160040FB1E /* Products */,
