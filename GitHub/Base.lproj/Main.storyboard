@@ -214,6 +214,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DLv-M9-fSY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zMb-1E-LD1">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="share" id="aga-YA-Nig">
+                            <connections>
+                                <action selector="shareProfileAction:" destination="7aP-Da-74c" id="PEl-xr-UB1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="contentScrollView" destination="Cq7-fo-kYW" id="vE2-qY-wGh"/>
                         <outlet property="contentStackView" destination="DEn-kQ-Kn2" id="0y5-3P-wKz"/>
@@ -314,4 +321,7 @@
             <point key="canvasLocation" x="2774" y="-564"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="share" width="51.200000762939453" height="51.200000762939453"/>
+    </resources>
 </document>

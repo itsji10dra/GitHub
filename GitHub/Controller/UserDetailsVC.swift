@@ -45,6 +45,8 @@ class UserDetailsVC: UIViewController {
     
     internal var detailsViewModel: DetailsViewModel!
     
+    private var loadedDetails: DetailsDisplayModel?
+    
     // MARK: - View Hierarchy
 
     override func viewDidLoad() {
@@ -56,6 +58,16 @@ class UserDetailsVC: UIViewController {
         loadDetails()
     }
     
+    // MARK: - IBOutlets Action
+    
+    @IBAction func shareProfileAction(_ sender: Any) {
+        let text = "Username: \(loadedDetails?.username ?? "NA")"
+        let content = [profileImageView.image as Any, text].compactMap { $0 }
+        let activityViewController = UIActivityViewController(activityItems: content, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        present(activityViewController, animated: true, completion: nil)
+    }
+
     // MARK: - Private Method
 
     private func customiseUI() {
@@ -85,6 +97,8 @@ class UserDetailsVC: UIViewController {
     
     private func loadDetailsInUI(using details: DetailsDisplayModel) {
         
+        contentStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        
         profileImageView.setImage(with: details.profileImageURL, placeholder: nil)
         
         let views = [DetailInfoView(title: "Name:", text: details.name ?? "NA"),
@@ -102,6 +116,8 @@ class UserDetailsVC: UIViewController {
                      DetailInfoView(title: "Show on web", text: "", action: { [unowned self] in self.loadURL(url: details.webProfileURL) })]
 
         views.forEach { view in contentStackView.addArrangedSubview(view) }
+        
+        loadedDetails = details
     }
     
     private func loadURL(url: URL) {
