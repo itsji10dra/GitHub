@@ -26,7 +26,7 @@ class DetailInfoView: UIView {
     
     init(title: String, text: String, action: (() -> Void)? = nil) {
         super.init(frame: .zero)
-        loadContentView()
+        self.loadContentView()
         self.titleLabel.text = title
         self.infoLabel.text = text
         self.action = action

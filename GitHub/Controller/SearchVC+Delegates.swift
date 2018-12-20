@@ -18,6 +18,10 @@ extension SearchVC: UISearchBarDelegate {
         
         searchText.isEmpty ? usersTableView.reloadData() : loadUsers(query: searchText)
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
 }
 
 extension SearchVC: UIScrollViewDelegate {

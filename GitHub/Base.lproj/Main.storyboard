@@ -41,7 +41,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="qTP-qL-qzb"/>
                                 </constraints>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" textContentType="nickname"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="nickname"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="kRz-FZ-za8"/>
                                 </connections>
@@ -49,7 +49,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jZs-UE-SXv">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UZ2-Do-UWj">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UZ2-Do-UWj">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="547"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
@@ -236,7 +236,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xRR-49-NWy">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="100" id="pxd-RV-F2W" customClass="UserCell" customModule="GitHub" customModuleProvider="target">
@@ -299,7 +299,7 @@
                         <constraints>
                             <constraint firstItem="xRR-49-NWy" firstAttribute="leading" secondItem="ina-4V-hDR" secondAttribute="leading" id="R8e-P1-k2K"/>
                             <constraint firstItem="ina-4V-hDR" firstAttribute="trailing" secondItem="xRR-49-NWy" secondAttribute="trailing" id="Wh4-aj-Fg9"/>
-                            <constraint firstItem="xRR-49-NWy" firstAttribute="top" secondItem="ina-4V-hDR" secondAttribute="top" id="hM2-Au-dxx"/>
+                            <constraint firstItem="xRR-49-NWy" firstAttribute="top" secondItem="cie-p0-MXp" secondAttribute="top" id="hM2-Au-dxx"/>
                             <constraint firstAttribute="bottom" secondItem="xRR-49-NWy" secondAttribute="bottom" id="uKq-Ka-BSp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ina-4V-hDR"/>
