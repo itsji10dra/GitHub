@@ -13,7 +13,6 @@
 		0781E0C121CA50160040FB1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0781E0BF21CA50160040FB1E /* Main.storyboard */; };
 		0781E0C321CA50180040FB1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0781E0C221CA50180040FB1E /* Assets.xcassets */; };
 		0781E0C621CA50180040FB1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0781E0C421CA50180040FB1E /* LaunchScreen.storyboard */; };
-		0781E0D121CA50180040FB1E /* GitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E0D021CA50180040FB1E /* GitHubTests.swift */; };
 		0781E0DE21CA511D0040FB1E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E0DD21CA511D0040FB1E /* Configuration.swift */; };
 		0781E0ED21CA51C30040FB1E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E0EA21CA51C30040FB1E /* UIView+Extension.swift */; };
 		0781E0F421CA51CD0040FB1E /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0781E0F121CA51CD0040FB1E /* LoadingView.xib */; };
@@ -40,6 +39,11 @@
 		0781E13221CAD1970040FB1E /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E13121CAD1970040FB1E /* FollowersListVC.swift */; };
 		0781E13421CAD6330040FB1E /* FollowersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E13321CAD6330040FB1E /* FollowersViewModel.swift */; };
 		0781E13621CADC390040FB1E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E13521CADC390040FB1E /* Date+Extension.swift */; };
+		0781E13E21CB68620040FB1E /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E13821CB68620040FB1E /* NetworkManagerTests.swift */; };
+		0781E13F21CB68620040FB1E /* Success.json in Resources */ = {isa = PBXBuildFile; fileRef = 0781E13A21CB68620040FB1E /* Success.json */; };
+		0781E14021CB68620040FB1E /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E13B21CB68620040FB1E /* URLSessionMock.swift */; };
+		0781E14121CB68620040FB1E /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E13C21CB68620040FB1E /* URLSessionDataTaskMock.swift */; };
+		0781E14221CB68620040FB1E /* URLManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E13D21CB68620040FB1E /* URLManagerTests.swift */; };
 		B206B8C428FF41C935A2045C /* Pods_GitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C6B7B84A7E5F383559ED11 /* Pods_GitHub.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +66,6 @@
 		0781E0C521CA50180040FB1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0781E0C721CA50180040FB1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0781E0CC21CA50180040FB1E /* GitHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0781E0D021CA50180040FB1E /* GitHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTests.swift; sourceTree = "<group>"; };
 		0781E0D221CA50180040FB1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0781E0DD21CA511D0040FB1E /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		0781E0DF21CA51390040FB1E /* Assignment.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Assignment.pdf; sourceTree = "<group>"; };
@@ -91,6 +94,11 @@
 		0781E13121CAD1970040FB1E /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
 		0781E13321CAD6330040FB1E /* FollowersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewModel.swift; sourceTree = "<group>"; };
 		0781E13521CADC390040FB1E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		0781E13821CB68620040FB1E /* NetworkManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		0781E13A21CB68620040FB1E /* Success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Success.json; sourceTree = "<group>"; };
+		0781E13B21CB68620040FB1E /* URLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		0781E13C21CB68620040FB1E /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
+		0781E13D21CB68620040FB1E /* URLManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLManagerTests.swift; sourceTree = "<group>"; };
 		14B2E0D4B1BA45F4A9BAE6BC /* Pods-GitHubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubTests/Pods-GitHubTests.release.xcconfig"; sourceTree = "<group>"; };
 		36E4D194A9A7BD0163C0C0D9 /* Pods-GitHubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubTests/Pods-GitHubTests.debug.xcconfig"; sourceTree = "<group>"; };
 		36FA0061663C0C5E17AEB618 /* Pods-GitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub/Pods-GitHub.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,10 +155,10 @@
 				0781E0DD21CA511D0040FB1E /* Configuration.swift */,
 				0781E0BF21CA50160040FB1E /* Main.storyboard */,
 				0781E11A21CA7CDD0040FB1E /* UI */,
-				0781E10B21CA57410040FB1E /* Model */,
-				0781E0FA21CA529D0040FB1E /* Network */,
-				0781E0EF21CA51CD0040FB1E /* Views */,
 				0781E0E821CA51C30040FB1E /* Extension */,
+				0781E0FA21CA529D0040FB1E /* Network */,
+				0781E10B21CA57410040FB1E /* Model */,
+				0781E0EF21CA51CD0040FB1E /* Views */,
 				0781E0DC21CA50F80040FB1E /* Controller */,
 				0781E0F721CA52730040FB1E /* ViewModel */,
 				0781E0DB21CA50F10040FB1E /* Resources */,
@@ -162,7 +170,7 @@
 		0781E0CF21CA50180040FB1E /* GitHubTests */ = {
 			isa = PBXGroup;
 			children = (
-				0781E0D021CA50180040FB1E /* GitHubTests.swift */,
+				0781E13721CB68620040FB1E /* Network */,
 				0781E0D221CA50180040FB1E /* Info.plist */,
 			);
 			path = GitHubTests;
@@ -266,6 +274,26 @@
 				0781E12921CAAC5A0040FB1E /* DetailInfoView.xib */,
 			);
 			path = DetailInfoView;
+			sourceTree = "<group>";
+		};
+		0781E13721CB68620040FB1E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0781E13921CB68620040FB1E /* Mock */,
+				0781E13821CB68620040FB1E /* NetworkManagerTests.swift */,
+				0781E13D21CB68620040FB1E /* URLManagerTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0781E13921CB68620040FB1E /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				0781E13A21CB68620040FB1E /* Success.json */,
+				0781E13B21CB68620040FB1E /* URLSessionMock.swift */,
+				0781E13C21CB68620040FB1E /* URLSessionDataTaskMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		6024F9932A6A8D0DC30902B8 /* Pods */ = {
@@ -384,6 +412,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0781E13F21CB68620040FB1E /* Success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,7 +525,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0781E0D121CA50180040FB1E /* GitHubTests.swift in Sources */,
+				0781E14021CB68620040FB1E /* URLSessionMock.swift in Sources */,
+				0781E14221CB68620040FB1E /* URLManagerTests.swift in Sources */,
+				0781E13E21CB68620040FB1E /* NetworkManagerTests.swift in Sources */,
+				0781E14121CB68620040FB1E /* URLSessionDataTaskMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

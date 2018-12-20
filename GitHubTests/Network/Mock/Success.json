@@ -1,0 +1,48 @@
+{
+    "total_count": 2,
+    "incomplete_results": false,
+    "items": [
+        {
+            "login": "hellyeah",
+            "id": 1475361,
+            "node_id": "MDQ6VXNlcjE0NzUzNjE=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/1475361?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/hellyeah",
+            "html_url": "https://github.com/hellyeah",
+            "followers_url": "https://api.github.com/users/hellyeah/followers",
+            "following_url": "https://api.github.com/users/hellyeah/following{/other_user}",
+            "gists_url": "https://api.github.com/users/hellyeah/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/hellyeah/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/hellyeah/subscriptions",
+            "organizations_url": "https://api.github.com/users/hellyeah/orgs",
+            "repos_url": "https://api.github.com/users/hellyeah/repos",
+            "events_url": "https://api.github.com/users/hellyeah/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/hellyeah/received_events",
+            "type": "User",
+            "site_admin": false,
+            "score": 164.05354
+        },
+        {
+            "login": "hellyeahllc",
+            "id": 6674092,
+            "node_id": "MDEyOk9yZ2FuaXphdGlvbjY2NzQwOTI=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/6674092?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/hellyeahllc",
+            "html_url": "https://github.com/hellyeahllc",
+            "followers_url": "https://api.github.com/users/hellyeahllc/followers",
+            "following_url": "https://api.github.com/users/hellyeahllc/following{/other_user}",
+            "gists_url": "https://api.github.com/users/hellyeahllc/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/hellyeahllc/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/hellyeahllc/subscriptions",
+            "organizations_url": "https://api.github.com/users/hellyeahllc/orgs",
+            "repos_url": "https://api.github.com/users/hellyeahllc/repos",
+            "events_url": "https://api.github.com/users/hellyeahllc/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/hellyeahllc/received_events",
+            "type": "Organization",
+            "site_admin": false,
+            "score": 31.675411
+        },
+    ]
+}
