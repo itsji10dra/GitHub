@@ -7,9 +7,40 @@
 //
 
 import XCTest
+import Nimble
 @testable import GitHub
 
 class URLManagerTests: XCTestCase {
+
+    func testGetURLForEndpointWithoutQueryParam() {
+        
+        var reachedPoint1 = false
+        var reachedPoint2 = false
+        
+        let exception: BadInstructionException? = catchBadInstruction {
+            reachedPoint1 = true
+            _ = URLManager.getURLForEndpoint(.searchUsers)
+            reachedPoint2 = true
+        }
+        XCTAssertNotNil(exception)
+        XCTAssertTrue(reachedPoint1)
+        XCTAssertFalse(reachedPoint2)
+    }
+    
+    func testGetURLForEndpointWithoutPathParam() {
+        
+        var reachedPoint1 = false
+        var reachedPoint2 = false
+        
+        let exception: BadInstructionException? = catchBadInstruction {
+            reachedPoint1 = true
+            _ = URLManager.getURLForEndpoint(.user)
+            reachedPoint2 = true
+        }
+        XCTAssertNotNil(exception)
+        XCTAssertTrue(reachedPoint1)
+        XCTAssertFalse(reachedPoint2)
+    }
 
     func testGetURLForEndpoint() {
         
