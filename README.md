@@ -29,6 +29,10 @@ An iOS Swifty app that lets you search GitHub user by querying their username, s
 
 ## ScreenShots
 
+![Alt Text](https://raw.github.com/itsji10dra/GitHub/master/Screenshot/1.png)
+![Alt Text](https://raw.github.com/itsji10dra/GitHub/master/Screenshot/2.png)
+![Alt Text](https://raw.github.com/itsji10dra/GitHub/master/Screenshot/3.png)
+![Alt Text](https://raw.github.com/itsji10dra/GitHub/master/Screenshot/4.png)
 
 ## Contact
 
