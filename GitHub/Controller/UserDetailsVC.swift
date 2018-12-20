@@ -29,6 +29,7 @@ class UserDetailsVC: UIViewController {
         let username: String
         let name: String?
         let profileImageURL: URL
+        let webProfileURL: URL
         let company: String?
         let blog: String?
         let location: String?
@@ -97,9 +98,15 @@ class UserDetailsVC: UIViewController {
                      DetailInfoView(title: "Public Gists:", text: "\(details.publicGistCount)"),
                      DetailInfoView(title: "Followers:", text: "\(details.followersCount)", action: { [unowned self] in self.loadFollowers() }),
                      DetailInfoView(title: "Following:", text: "\(details.followingCount)"),
-                     DetailInfoView(title: "Last Updated:", text: details.updatedDate ?? "NA")]
+                     DetailInfoView(title: "Last Updated:", text: details.updatedDate ?? "NA"),
+                     DetailInfoView(title: "Show on web", text: "", action: { [unowned self] in self.loadURL(url: details.webProfileURL) })]
 
         views.forEach { view in contentStackView.addArrangedSubview(view) }
+    }
+    
+    private func loadURL(url: URL) {
+        let controller = SFSafariViewController(url: url)
+        present(controller, animated: true, completion: nil)
     }
     
     private func loadFollowers() {

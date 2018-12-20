@@ -56,6 +56,7 @@ class DetailsViewModel {
                 let details = UserDetailsVC.DetailsDisplayModel(username: user.login,
                                                                 name: user.name,
                                                                 profileImageURL: user.avatarURL,
+                                                                webProfileURL: user.htmlURL,
                                                                 company: user.company,
                                                                 blog: user.blog,
                                                                 location: user.location,
