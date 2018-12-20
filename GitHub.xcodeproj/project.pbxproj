@@ -44,6 +44,14 @@
 		0781E14021CB68620040FB1E /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E13B21CB68620040FB1E /* URLSessionMock.swift */; };
 		0781E14121CB68620040FB1E /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E13C21CB68620040FB1E /* URLSessionDataTaskMock.swift */; };
 		0781E14221CB68620040FB1E /* URLManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E13D21CB68620040FB1E /* URLManagerTests.swift */; };
+		0781E14421CB6BD60040FB1E /* ResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E14321CB6BD60040FB1E /* ResponseTests.swift */; };
+		0781E14721CB6BFF0040FB1E /* Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 0781E14621CB6BFF0040FB1E /* Response.json */; };
+		0781E14B21CB6F100040FB1E /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E14A21CB6F100040FB1E /* UserTests.swift */; };
+		0781E14D21CB6F4F0040FB1E /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 0781E14C21CB6F4F0040FB1E /* User.json */; };
+		0781E14F21CB6F6D0040FB1E /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E14E21CB6F6D0040FB1E /* Mapper.swift */; };
+		0781E15321CB72980040FB1E /* PagingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E15221CB72980040FB1E /* PagingViewModelTests.swift */; };
+		0781E15521CB73480040FB1E /* DetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E15421CB73480040FB1E /* DetailsViewModelTests.swift */; };
+		0781E15721CB73CC0040FB1E /* FollowersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0781E15621CB73CC0040FB1E /* FollowersViewModelTests.swift */; };
 		B206B8C428FF41C935A2045C /* Pods_GitHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C6B7B84A7E5F383559ED11 /* Pods_GitHub.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +107,14 @@
 		0781E13B21CB68620040FB1E /* URLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		0781E13C21CB68620040FB1E /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
 		0781E13D21CB68620040FB1E /* URLManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLManagerTests.swift; sourceTree = "<group>"; };
+		0781E14321CB6BD60040FB1E /* ResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseTests.swift; sourceTree = "<group>"; };
+		0781E14621CB6BFF0040FB1E /* Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Response.json; sourceTree = "<group>"; };
+		0781E14A21CB6F100040FB1E /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		0781E14C21CB6F4F0040FB1E /* User.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
+		0781E14E21CB6F6D0040FB1E /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		0781E15221CB72980040FB1E /* PagingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingViewModelTests.swift; sourceTree = "<group>"; };
+		0781E15421CB73480040FB1E /* DetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModelTests.swift; sourceTree = "<group>"; };
+		0781E15621CB73CC0040FB1E /* FollowersViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowersViewModelTests.swift; sourceTree = "<group>"; };
 		14B2E0D4B1BA45F4A9BAE6BC /* Pods-GitHubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubTests/Pods-GitHubTests.release.xcconfig"; sourceTree = "<group>"; };
 		36E4D194A9A7BD0163C0C0D9 /* Pods-GitHubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubTests/Pods-GitHubTests.debug.xcconfig"; sourceTree = "<group>"; };
 		36FA0061663C0C5E17AEB618 /* Pods-GitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub/Pods-GitHub.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +170,7 @@
 				0781E0BB21CA50160040FB1E /* AppDelegate.swift */,
 				0781E0DD21CA511D0040FB1E /* Configuration.swift */,
 				0781E0BF21CA50160040FB1E /* Main.storyboard */,
+				0781E15021CB6F710040FB1E /* Helper */,
 				0781E11A21CA7CDD0040FB1E /* UI */,
 				0781E0E821CA51C30040FB1E /* Extension */,
 				0781E0FA21CA529D0040FB1E /* Network */,
@@ -171,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				0781E13721CB68620040FB1E /* Network */,
+				0781E14521CB6BDC0040FB1E /* Model */,
+				0781E15121CB727A0040FB1E /* ViewModel */,
 				0781E0D221CA50180040FB1E /* Info.plist */,
 			);
 			path = GitHubTests;
@@ -296,6 +315,51 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		0781E14521CB6BDC0040FB1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0781E14921CB6F010040FB1E /* User */,
+				0781E14821CB6EC10040FB1E /* Response */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0781E14821CB6EC10040FB1E /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				0781E14621CB6BFF0040FB1E /* Response.json */,
+				0781E14321CB6BD60040FB1E /* ResponseTests.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		0781E14921CB6F010040FB1E /* User */ = {
+			isa = PBXGroup;
+			children = (
+				0781E14C21CB6F4F0040FB1E /* User.json */,
+				0781E14A21CB6F100040FB1E /* UserTests.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		0781E15021CB6F710040FB1E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0781E14E21CB6F6D0040FB1E /* Mapper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		0781E15121CB727A0040FB1E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0781E15221CB72980040FB1E /* PagingViewModelTests.swift */,
+				0781E15421CB73480040FB1E /* DetailsViewModelTests.swift */,
+				0781E15621CB73CC0040FB1E /* FollowersViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6024F9932A6A8D0DC30902B8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +476,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0781E14721CB6BFF0040FB1E /* Response.json in Resources */,
+				0781E14D21CB6F4F0040FB1E /* User.json in Resources */,
 				0781E13F21CB68620040FB1E /* Success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +571,7 @@
 				0781E0FE21CA529E0040FB1E /* NetworkManager.swift in Sources */,
 				0781E11721CA5EBD0040FB1E /* UserCell.swift in Sources */,
 				0781E10721CA53060040FB1E /* EndPoints.swift in Sources */,
+				0781E14F21CB6F6D0040FB1E /* Mapper.swift in Sources */,
 				0781E12421CA9DD80040FB1E /* DetailsViewModel.swift in Sources */,
 				0781E11321CA5C790040FB1E /* SearchVC+Delegates.swift in Sources */,
 				0781E13621CADC390040FB1E /* Date+Extension.swift in Sources */,
@@ -525,6 +592,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0781E14B21CB6F100040FB1E /* UserTests.swift in Sources */,
+				0781E14421CB6BD60040FB1E /* ResponseTests.swift in Sources */,
+				0781E15721CB73CC0040FB1E /* FollowersViewModelTests.swift in Sources */,
+				0781E15321CB72980040FB1E /* PagingViewModelTests.swift in Sources */,
+				0781E15521CB73480040FB1E /* DetailsViewModelTests.swift in Sources */,
 				0781E14021CB68620040FB1E /* URLSessionMock.swift in Sources */,
 				0781E14221CB68620040FB1E /* URLManagerTests.swift in Sources */,
 				0781E13E21CB68620040FB1E /* NetworkManagerTests.swift in Sources */,

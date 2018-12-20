@@ -33,15 +33,12 @@ class NetworkManager {
     
     public func dataTaskFromURL<T: Decodable>(_ url: URL, completion: @escaping ((Result<T>) -> Void)) -> URLSessionDataTask {
         
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(DateFormatter.gitHubDateFormatter)
-
         return session.dataTask(with: url, completionHandler: { (data, response, error) in
             
             if error == nil,
                 let data = data {
                 do {
-                    let response = try decoder.decode(T.self, from: data)
+                    let response = try Mapper.decoder.decode(T.self, from: data)
                     completion(.success(response))
                 } catch let parsingError {
                     print(url, parsingError)

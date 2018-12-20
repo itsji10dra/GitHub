@@ -1,0 +1,25 @@
+{
+    "total_count": 32,
+    "incomplete_results": false,
+    "items": {
+        "login": "awesome",
+        "id": 19291,
+        "node_id": "MDQ6VXNlcjE5Mjkx",
+        "avatar_url": "https://avatars3.githubusercontent.com/u/19291?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/awesome",
+        "html_url": "https://github.com/awesome",
+        "followers_url": "https://api.github.com/users/awesome/followers",
+        "following_url": "https://api.github.com/users/awesome/following{/other_user}",
+        "gists_url": "https://api.github.com/users/awesome/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/awesome/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/awesome/subscriptions",
+        "organizations_url": "https://api.github.com/users/awesome/orgs",
+        "repos_url": "https://api.github.com/users/awesome/repos",
+        "events_url": "https://api.github.com/users/awesome/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/awesome/received_events",
+        "type": "User",
+        "site_admin": false,
+        "score": 153.42181
+    }
+}
