@@ -33,10 +33,16 @@ class FollowersListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        followersTableView.tableFooterView = UIView()
+        customiseUI()
         loadFollowers()
     }
     
+    // MARK: - Methods
+
+    private func customiseUI() {
+        followersTableView.tableFooterView = UIView()   //For hiding empty cells...
+    }
+
     private func loadFollowers() {
         
         ActivityIndicator.startAnimating() { [weak self] in

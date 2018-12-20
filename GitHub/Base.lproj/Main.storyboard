@@ -41,7 +41,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="qTP-qL-qzb"/>
                                 </constraints>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="nickname"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="kRz-FZ-za8"/>
                                 </connections>

@@ -46,7 +46,7 @@ class SearchVC: UIViewController {
                                                  typeIcon: $0.type.iconImage) }
         })
         
-        usersTableView.tableFooterView = UIView()   //For hiding empty cells...
+        customiseUI()
     }
     
     deinit {
@@ -54,6 +54,11 @@ class SearchVC: UIViewController {
     }
     
     // MARK: - Methods
+    
+    private func customiseUI() {
+        searchBar.autocapitalizationType = .none
+        usersTableView.tableFooterView = UIView()   //For hiding empty cells...
+    }
     
     internal func loadUsers(query: String) {
         
