@@ -40,9 +40,9 @@ An iOS Swifty app that lets you search GitHub user by querying their username, s
 
 ### Jitendra Gandhi
 ###### An Immature Programmer
-* http://itsji10dra.com/
+* https://itsji10dra.com/
 * https://github.com/itsji10dra
-* http://twitter.com/itsji10dra
+* https://twitter.com/itsji10dra
 * https://www.linkedin.com/in/itsji10dra/
 * https://stackoverflow.com/users/story/2713079/
 
